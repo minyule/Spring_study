@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
 public class MemberServive {
 
     //    private final MemberRepository memberRepository = new MemoryMemberRepository();
@@ -17,7 +16,6 @@ public class MemberServive {
     private final MemberRepository memberRepository;
     // 외부에서 넣어주도록 변경
     // 자신이 직접 안넣고 다른 데에서 넣어줌 : dependency injection 의존성 주입
-    @Autowired
     public MemberServive(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
